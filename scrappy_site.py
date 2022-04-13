@@ -1,4 +1,4 @@
-from selenium import webdriver
+
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.expected_conditions import _find_elements
@@ -10,6 +10,7 @@ import smtplib
 import os
 from email.message import EmailMessage
 import re
+
 
 
 class Scrappy:
@@ -55,6 +56,7 @@ class Scrappy:
             for i in range(12):
                 lista_nomes = self.driver.find_elements_by_xpath(
                     f'/html/body/div[5]/div[2]/div[1]/div[{item}]/div/h2/a')
+                      /html/body/div[5]/div[2]/div[1]/div[2]/div/h2/a
                 self.lista_nome_celulares.append(lista_nomes[0].text)
                 sleep(1)
                 lista_precos = self.driver.find_elements_by_xpath(
